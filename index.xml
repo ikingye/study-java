@@ -19,7 +19,25 @@
     </item>
     
     <item>
-      <title>教程</title>
+      <title>百度</title>
+      <link>https://ikingye.github.io/study-java/docs/basic/spec/baidu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-java/docs/basic/spec/baidu/</guid>
+      <description>百度 Java 编码规范 V1.3 </description>
+    </item>
+    
+    <item>
+      <title>数据结构</title>
+      <link>https://ikingye.github.io/study-java/docs/basic/grammar/datastruct/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-java/docs/basic/grammar/datastruct/</guid>
+      <description>Java 语言数据结构 </description>
+    </item>
+    
+    <item>
+      <title>4.1 教程</title>
       <link>https://ikingye.github.io/study-java/docs/appendix/tutorial/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -33,40 +51,22 @@ seaswalker/JDK  JDK 源码阅读笔记
     </item>
     
     <item>
-      <title>百度</title>
-      <link>https://ikingye.github.io/study-java/docs/basic/practice/spec/baidu/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ikingye.github.io/study-java/docs/basic/practice/spec/baidu/</guid>
-      <description>百度 Java 编码规范 V1.3 </description>
-    </item>
-    
-    <item>
-      <title>常用 package</title>
-      <link>https://ikingye.github.io/study-java/docs/basic/practice/package/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ikingye.github.io/study-java/docs/basic/practice/package/</guid>
-      <description>Java 常用 package </description>
-    </item>
-    
-    <item>
-      <title>数据结构</title>
-      <link>https://ikingye.github.io/study-java/docs/basic/grammar/datastruct/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ikingye.github.io/study-java/docs/basic/grammar/datastruct/</guid>
-      <description>Java 语言数据结构 </description>
-    </item>
-    
-    <item>
-      <title>面试题</title>
+      <title>4.2 面试题</title>
       <link>https://ikingye.github.io/study-java/docs/appendix/interview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-java/docs/appendix/interview/</guid>
       <description>Java 面试题 基础题 参考：
  拿下阿里、头条、滴滴的 offer 后谈谈面试经验（上）  进阶题 高阶题 </description>
+    </item>
+    
+    <item>
+      <title>4.3 关注项目</title>
+      <link>https://ikingye.github.io/study-java/docs/appendix/attention/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-java/docs/appendix/attention/</guid>
+      <description>关注项目 </description>
     </item>
     
   </channel>
