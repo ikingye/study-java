@@ -15,7 +15,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-java/docs/basic/grammar/keyword/</guid>
-      <description>Java 关键字 </description>
+      <description>Java 关键字 #  </description>
     </item>
     
     <item>
@@ -24,7 +24,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-java/docs/basic/spec/baidu/</guid>
-      <description>百度 Java 编码规范 V1.3 </description>
+      <description>百度 Java 编码规范 V1.3 #  </description>
     </item>
     
     <item>
@@ -33,7 +33,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-java/docs/basic/grammar/datastruct/</guid>
-      <description>Java 语言数据结构 </description>
+      <description>Java 语言数据结构 #  </description>
     </item>
     
     <item>
@@ -42,12 +42,12 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-java/docs/appendix/tutorial/</guid>
-      <description>Java 教程 基础  进阶 doocs/advanced-java  互联网 Java 工程师进阶知识完全扫盲：涵盖高并发、分布式、高可用、微服务、海量数据处理等领域知识，后端同学必看，前端同学也可学习 https://doocs.github.io/advanced-java
-Snailclimb/JavaGuide  【Java 学习 + 面试指南】 一份涵盖大部分 Java 程序员所需要掌握的核心知识。
-Effective Java  第 3 版中文版：sjsdfg.github.io/effective-java-3rd-chinese   Java 编程思想  第 5 版中文版：lingcoder.github.io/OnJava8   redspider1/concurrent  Java 多线程系列文章 在线阅读
-源码阅读 seaswalker/spring-analysis  Spring 源码阅读
-seaswalker/JDK  JDK 源码阅读笔记
- 综合 博客  farmerjohngit/myblog    sorenduan/awesome-java-books  Java 技术书籍大全</description>
+      <description>Java 教程 #  基础 #   进阶 #  doocs/advanced-java #  互联网 Java 工程师进阶知识完全扫盲：涵盖高并发、分布式、高可用、微服务、海量数据处理等领域知识，后端同学必看，前端同学也可学习 https://doocs.github.io/advanced-java
+Snailclimb/JavaGuide #  【Java 学习 + 面试指南】 一份涵盖大部分 Java 程序员所需要掌握的核心知识。
+Effective Java #   第 3 版中文版：sjsdfg.github.io/effective-java-3rd-chinese   Java 编程思想 #   第 5 版中文版：lingcoder.github.io/OnJava8   redspider1/concurrent #  Java 多线程系列文章 在线阅读
+源码阅读 #  seaswalker/spring-analysis #  Spring 源码阅读
+seaswalker/JDK #  JDK 源码阅读笔记
+ 综合 #  博客 #   farmerjohngit/myblog    sorenduan/awesome-java-books #  Java 技术书籍大全</description>
     </item>
     
     <item>
@@ -56,8 +56,8 @@ seaswalker/JDK  JDK 源码阅读笔记
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-java/docs/appendix/interview/</guid>
-      <description>Java 面试题 基础题 参考：
- 拿下阿里、头条、滴滴的 offer 后谈谈面试经验（上）  进阶题 </description>
+      <description>Java 面试题 #  基础题 #  参考：
+ 拿下阿里、头条、滴滴的 offer 后谈谈面试经验（上）  进阶题 #  </description>
     </item>
     
     <item>
@@ -66,7 +66,7 @@ seaswalker/JDK  JDK 源码阅读笔记
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-java/docs/appendix/attention/</guid>
-      <description>关注项目 </description>
+      <description>关注项目 #  </description>
     </item>
     
   </channel>
