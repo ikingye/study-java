@@ -2,43 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>第四部分 附录 on Java 学习笔记</title>
-    <link>https://ikingye.github.io/study-java/docs/appendix/</link>
+    <link>https://kingye.me/study-java/docs/appendix/</link>
     <description>Recent content in 第四部分 附录 on Java 学习笔记</description>
-    <generator>Hugo -- gohugo.io</generator>
-    
-	<atom:link href="https://ikingye.github.io/study-java/docs/appendix/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://kingye.me/study-java/docs/appendix/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>4.1 教程</title>
-      <link>https://ikingye.github.io/study-java/docs/appendix/tutorial/</link>
+      <link>https://kingye.me/study-java/docs/appendix/tutorial/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-java/docs/appendix/tutorial/</guid>
-      <description>Java 教程 #  基础 #   进阶 #  doocs/advanced-java #  互联网 Java 工程师进阶知识完全扫盲：涵盖高并发、分布式、高可用、微服务、海量数据处理等领域知识，后端同学必看，前端同学也可学习 https://doocs.github.io/advanced-java
+      <guid>https://kingye.me/study-java/docs/appendix/tutorial/</guid>
+      <description>Java 教程 #  基础 #  Heart First Java Web #  skyline75489/Heart-First-JavaWeb 一个走心的 Java Web 入门开发教程
+https://skyline75489.github.io/Heart-First-JavaWeb/
+ 进阶 #  doocs/advanced-java #  互联网 Java 工程师进阶知识完全扫盲：涵盖高并发、分布式、高可用、微服务、海量数据处理等领域知识，后端同学必看，前端同学也可学习 https://doocs.github.io/advanced-java
 Snailclimb/JavaGuide #  【Java 学习 + 面试指南】 一份涵盖大部分 Java 程序员所需要掌握的核心知识。
 Effective Java #   第 3 版中文版： sjsdfg/effective-java-3rd-chinese   Java 编程思想 #   第 5 版中文版： LingCoder/OnJava8   redspider1/concurrent #  Java 多线程系列文章 在线阅读
-源码阅读 #  seaswalker/spring-analysis #  Spring 源码阅读
-seaswalker/JDK #  JDK 源码阅读笔记
- 综合 #  博客 #   farmerjohngit/myblog    sorenduan/awesome-java-books #  Java 技术书籍大全</description>
+源码阅读 #  seaswalker/spring-analysis #  Spring 源码阅读</description>
     </item>
     
     <item>
       <title>4.2 面试题</title>
-      <link>https://ikingye.github.io/study-java/docs/appendix/interview/</link>
+      <link>https://kingye.me/study-java/docs/appendix/interview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-java/docs/appendix/interview/</guid>
+      <guid>https://kingye.me/study-java/docs/appendix/interview/</guid>
       <description>Java 面试题 #  基础题 #  参考：
  拿下阿里、头条、滴滴的 offer 后谈谈面试经验（上）  进阶题 #  </description>
     </item>
     
     <item>
       <title>4.3 关注项目</title>
-      <link>https://ikingye.github.io/study-java/docs/appendix/attention/</link>
+      <link>https://kingye.me/study-java/docs/appendix/attention/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-java/docs/appendix/attention/</guid>
+      <guid>https://kingye.me/study-java/docs/appendix/attention/</guid>
       <description>关注项目 #  </description>
     </item>
     
