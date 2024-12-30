@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.140.1">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  Java 运行时
+  #
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://kingye.me/study-java/docs/code/runtime/">
+  <meta property="og:site_name" content="Java 学习笔记">
+  <meta property="og:title" content="3.3 运行时">
+  <meta property="og:description" content="Java 运行时 #">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+<title>3.3 运行时 | Java 学习笔记</title>
+<link rel="manifest" href="/study-java/manifest.json">
+<link rel="icon" href="/study-java/favicon.png" >
+<link rel="canonical" href="https://kingye.me/study-java/docs/code/runtime/">
+<link rel="stylesheet" href="/study-java/book.min.a9fd347d07ee042ade7b8c22d2c14b72b69e154966252ab277e80a22c2a3be81.css" integrity="sha256-qf00fQfuBCree4wi0sFLcraeFUlmJSqyd&#43;gKIsKjvoE=" crossorigin="anonymous">
+  <script defer src="/study-java/fuse.min.js"></script>
+  <script defer src="/study-java/en.search.min.e70558aa78dbeb6cde990eb2bd446ab875368d2ecebd33267441de269d5549b5.js" integrity="sha256-5wVYqnjb62zemQ6yvURquHU2jS7OvTMmdEHeJp1VSbU=" crossorigin="anonymous"></script>
+<link rel="alternate" type="application/rss+xml" href="https://kingye.me/study-java/docs/code/runtime/index.xml" title="Java 学习笔记" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/study-java/"><span>Java 学习笔记</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+<ul>
+  <li><a href="https://kingye.me" target="_blank" rel="noopener noreferrer">博客</a></li>
+  <li><a href="https://cdn.jsdelivr.net/gh/ikingye/imagehost/picgo/20200417021727.png" target="_blank" rel="noopener noreferrer">公众号</a></li>
+  <li><a href="https://github.com/ikingye" target="_blank" rel="noopener noreferrer">Github</a></li>
+  <li><a href="https://weibo.com/kingyip15215" target="_blank" rel="noopener noreferrer">微博</a></li>
+  <li><a href="https://www.zhihu.com/people/wutongyip" target="_blank" rel="noopener noreferrer">知乎</a></li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>第一部分 基础入门</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b347ba22fbf9ddb10fc8e17e82d50588" class="toggle"  />
+    <label for="section-b347ba22fbf9ddb10fc8e17e82d50588" class="flex justify-between">
+      <a href="/study-java/docs/basic/grammar/" class="">1.1 语法</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/study-java/docs/basic/grammar/keyword/" class="">关键字</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/study-java/docs/basic/grammar/datastruct/" class="">数据结构</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b09b601b0a809a79744620c9768946f4" class="toggle"  />
+    <label for="section-b09b601b0a809a79744620c9768946f4" class="flex justify-between">
+      <a href="/study-java/docs/basic/std/" class="">1.2 标准库</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-393c29c9ec6bcfd646db16b09b62310f" class="toggle"  />
+    <label for="section-393c29c9ec6bcfd646db16b09b62310f" class="flex justify-between">
+      <a href="/study-java/docs/basic/spec/" class="">1.3 编程规范</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-19bf1fd8ead0bf8af25270bef756f48c" class="toggle"  />
+    <label for="section-19bf1fd8ead0bf8af25270bef756f48c" class="flex justify-between">
+      <a href="/study-java/docs/basic/other/" class="">1.4 其他</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-63d21f0bed37de71892a28b7499bf91f" class="toggle"  />
+    <label for="section-63d21f0bed37de71892a28b7499bf91f" class="flex justify-between">
+      <a href="/study-java/docs/basic/other/version/" class="">版本</a>
+    </label>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>第二部分 进阶实战</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f8ca28a6b3074fede0ff3b0a8569aa5f" class="toggle"  />
+    <label for="section-f8ca28a6b3074fede0ff3b0a8569aa5f" class="flex justify-between">
+      <a href="/study-java/docs/advanced/pattern/" class="">2.1 设计模式</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-60eea5bd9344f35bcb38c6d86dfa1f26" class="toggle"  />
+    <label for="section-60eea5bd9344f35bcb38c6d86dfa1f26" class="flex justify-between">
+      <a href="/study-java/docs/advanced/algs/" class="">2.2 算法实现</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ad9feea3caf27c986b2f53f887eda476" class="toggle"  />
+    <label for="section-ad9feea3caf27c986b2f53f887eda476" class="flex justify-between">
+      <a href="/study-java/docs/advanced/pkg/" class="">2.3 常用库</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3e7db987fc3e71bc40ff482921277dda" class="toggle"  />
+    <label for="section-3e7db987fc3e71bc40ff482921277dda" class="flex justify-between">
+      <a href="/study-java/docs/advanced/snippet/" class="">2.4 代码片段</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9af5ddf594e893ee922a322c76629c8e" class="toggle"  />
+    <label for="section-9af5ddf594e893ee922a322c76629c8e" class="flex justify-between">
+      <a href="/study-java/docs/advanced/test/" class="">2.5 测试</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c62e12145f6bb0a9d982a2b860d598c1" class="toggle"  />
+    <label for="section-c62e12145f6bb0a9d982a2b860d598c1" class="flex justify-between">
+      <a href="/study-java/docs/advanced/prof/" class="">2.6 性能</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-04b6ee15979588428f2b563237bb5fa7" class="toggle"  />
+    <label for="section-04b6ee15979588428f2b563237bb5fa7" class="flex justify-between">
+      <a href="/study-java/docs/advanced/frame/" class="">2.7 框架</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>第三部分 源码实现</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-268e292fde2ea877fccefa0c7c235ce1" class="toggle"  />
+    <label for="section-268e292fde2ea877fccefa0c7c235ce1" class="flex justify-between">
+      <a href="/study-java/docs/code/type/" class="">3.1 数据类型</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bb990bae05a9b4a88dac911d72e969fe" class="toggle"  />
+    <label for="section-bb990bae05a9b4a88dac911d72e969fe" class="flex justify-between">
+      <a href="/study-java/docs/code/keyword/" class="">3.2 关键字</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-64f48bc68d68363c7343a9d691db978f" class="toggle" checked />
+    <label for="section-64f48bc68d68363c7343a9d691db978f" class="flex justify-between">
+      <a href="/study-java/docs/code/runtime/" class="active">3.3 运行时</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c2c569db98a444e6fa418eebecaf8259" class="toggle"  />
+    <label for="section-c2c569db98a444e6fa418eebecaf8259" class="flex justify-between">
+      <a href="/study-java/docs/code/runtime/gc/" class="">GC</a>
+    </label>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f08c1395a09475d00ab97f2f7a1c01cc" class="toggle"  />
+    <label for="section-f08c1395a09475d00ab97f2f7a1c01cc" class="flex justify-between">
+      <a href="/study-java/docs/code/jvm/" class="">3.6 JVM</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>第四部分 附录</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-fa407ac8070142f66a65532062f1ff40" class="toggle"  />
+    <label for="section-fa407ac8070142f66a65532062f1ff40" class="flex justify-between">
+      <a href="/study-java/docs/appendix/tutorial/" class="">4.1 教程</a>
+    </label>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2c610c1ff2726f3acbae110974de8cde" class="toggle"  />
+    <label for="section-2c610c1ff2726f3acbae110974de8cde" class="flex justify-between">
+      <a href="/study-java/docs/appendix/interview/" class="">4.2 面试题</a>
+    </label>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7651208349dc75153f7ecfdfe3f7b192" class="toggle"  />
+    <label for="section-7651208349dc75153f7ecfdfe3f7b192" class="flex justify-between">
+      <a href="/study-java/docs/appendix/attention/" class="">4.3 关注项目</a>
+    </label>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+<ul>
+  <li><a href="https://cdn.jsdelivr.net/gh/ikingye/imagehost/picgo/20200417022040.png" target="_blank" rel="noopener noreferrer">微信</a></li>
+  <li><a href="https://qm.qq.com/cgi-bin/qm/qr?k=EUhzg0UwUksxpQnwEmPngRLezlC6qrnn&jump_from=webapi" target="_blank" rel="noopener noreferrer"><img src="//pub.idqqimg.com/wpa/images/group.png"></a></li>
+</ul>
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/study-java/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>3.3 运行时</strong>
+
+  <label for="toc-control">
+    
+    <img src="/study-java/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article id="article" class="markdown"><h1 id="java-运行时">
+  Java 运行时
+  <a class="anchor" href="#java-%e8%bf%90%e8%a1%8c%e6%97%b6">#</a>
+</h1>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+  <div><a class="flex align-center" href="https://github.com/ikingye/study-java/commit/16cd011c1a318a60b20de61595d7348fa69ae918" title='Last modified by yewang | 2020-07-16' target="_blank" rel="noopener">
+      <img src="/study-java/svg/calendar.svg" class="book-icon" alt="" />
+      <span>2020-07-16</span>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        <div>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <p><span id="busuanzi_container_page_pv">本文访问量 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 次</span></p>
+    <p><span id="busuanzi_container_site_pv">本站总访问量 <span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span> 次</span></p>
+    <p><span id="busuanzi_container_site_uv">本站总访客数 <span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span> 人</span></p>
+</div>
+
+
+
+
+
+      </footer>
+
+      
+  
+  <div class="book-comments">
+<script src="https://utteranc.es/client.js"
+  repo="ikingye/study-java"
+  issue-term="pathname"
+  theme="github-light"
+  crossorigin="anonymous"
+  async
+></script>
+
+<div id="footer">
+  <p>
+    <a href="https://kingye.me">叶王</a> &copy; 2013-2024
+    版权所有。如果本文档对你有所帮助，可以<a
+      href="https://cdn.jsdelivr.net/gh/ikingye/imagehost/picgo/20200428110046.png"
+      target="_blank"
+      rel="noopener noreferrer"
+      >请作者喝饮料</a
+    >。
+  </p>
+</div>
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents"></nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
