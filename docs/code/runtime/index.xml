@@ -1,69 +1,85 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>3.3 运行时 on Java 学习笔记</title><link>https://kingye.me/study-java/docs/code/runtime/</link><description>Recent content in 3.3 运行时 on Java 学习笔记</description><generator>Hugo</generator><language>en</language><atom:link href="https://kingye.me/study-java/docs/code/runtime/index.xml" rel="self" type="application/rss+xml"/><item><title>GC</title><link>https://kingye.me/study-java/docs/code/runtime/gc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kingye.me/study-java/docs/code/runtime/gc/</guid><description>&lt;h1 id="java-gc">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>3.3 运行时 on Java 学习笔记</title><link>https://kingye.me/study-java/docs/code/runtime/</link><description>Recent content in 3.3 运行时 on Java 学习笔记</description><generator>Hugo</generator><language>en</language><atom:link href="https://kingye.me/study-java/docs/code/runtime/index.xml" rel="self" type="application/rss+xml"/><item><title>GC</title><link>https://kingye.me/study-java/docs/code/runtime/gc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kingye.me/study-java/docs/code/runtime/gc/</guid><description>&lt;h1 id="java-gc"&gt;
  Java GC
- &lt;a class="anchor" href="#java-gc">#&lt;/a>
-&lt;/h1>
-&lt;p>&lt;code>Garbage Collection&lt;/code>&lt;/p>
-&lt;h2 id="标记">
+ 
+ &lt;a class="anchor" href="#java-gc"&gt;#&lt;/a&gt;
+ 
+&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;Garbage Collection&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id="标记"&gt;
  标记
- &lt;a class="anchor" href="#%e6%a0%87%e8%ae%b0">#&lt;/a>
-&lt;/h2>
-&lt;ul>
-&lt;li>对象回收
-&lt;ul>
-&lt;li>引用计数&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>方法区回收&lt;/li>
-&lt;/ul>
-&lt;h2 id="gc-算法">
+ 
+ &lt;a class="anchor" href="#%e6%a0%87%e8%ae%b0"&gt;#&lt;/a&gt;
+ 
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;对象回收
+&lt;ul&gt;
+&lt;li&gt;引用计数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;方法区回收&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="gc-算法"&gt;
  GC 算法
- &lt;a class="anchor" href="#gc-%e7%ae%97%e6%b3%95">#&lt;/a>
-&lt;/h2>
-&lt;h3 id="标记---清除-mark-sweep">
+ 
+ &lt;a class="anchor" href="#gc-%e7%ae%97%e6%b3%95"&gt;#&lt;/a&gt;
+ 
+&lt;/h2&gt;
+&lt;h3 id="标记---清除-mark-sweep"&gt;
  标记 - 清除 (Mark-Sweep)
- &lt;a class="anchor" href="#%e6%a0%87%e8%ae%b0---%e6%b8%85%e9%99%a4-mark-sweep">#&lt;/a>
-&lt;/h3>
-&lt;h3 id="复制-copying">
+ 
+ &lt;a class="anchor" href="#%e6%a0%87%e8%ae%b0---%e6%b8%85%e9%99%a4-mark-sweep"&gt;#&lt;/a&gt;
+ 
+&lt;/h3&gt;
+&lt;h3 id="复制-copying"&gt;
  复制 (Copying)
- &lt;a class="anchor" href="#%e5%a4%8d%e5%88%b6-copying">#&lt;/a>
-&lt;/h3>
-&lt;h3 id="标记---整理-mark-compact">
+ 
+ &lt;a class="anchor" href="#%e5%a4%8d%e5%88%b6-copying"&gt;#&lt;/a&gt;
+ 
+&lt;/h3&gt;
+&lt;h3 id="标记---整理-mark-compact"&gt;
  标记 - 整理 (Mark-Compact)
- &lt;a class="anchor" href="#%e6%a0%87%e8%ae%b0---%e6%95%b4%e7%90%86-mark-compact">#&lt;/a>
-&lt;/h3>
-&lt;h3 id="分代收集">
+ 
+ &lt;a class="anchor" href="#%e6%a0%87%e8%ae%b0---%e6%95%b4%e7%90%86-mark-compact"&gt;#&lt;/a&gt;
+ 
+&lt;/h3&gt;
+&lt;h3 id="分代收集"&gt;
  分代收集
- &lt;a class="anchor" href="#%e5%88%86%e4%bb%a3%e6%94%b6%e9%9b%86">#&lt;/a>
-&lt;/h3>
-&lt;hr>
-&lt;h2 id="垃圾收集器">
+ 
+ &lt;a class="anchor" href="#%e5%88%86%e4%bb%a3%e6%94%b6%e9%9b%86"&gt;#&lt;/a&gt;
+ 
+&lt;/h3&gt;
+&lt;hr&gt;
+&lt;h2 id="垃圾收集器"&gt;
  垃圾收集器
- &lt;a class="anchor" href="#%e5%9e%83%e5%9c%be%e6%94%b6%e9%9b%86%e5%99%a8">#&lt;/a>
-&lt;/h2>
-&lt;ul>
-&lt;li>串行收集器
-&lt;ul>
-&lt;li>Serial GC&lt;/li>
-&lt;li>Serial old&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>并行收集器
-&lt;ul>
-&lt;li>Parallel GC&lt;/li>
-&lt;li>ParNew GC&lt;/li>
-&lt;li>Parallel Old GC&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>并发收集器
-&lt;ul>
-&lt;li>CMS (&lt;code>Concurrent Mark Sweep&lt;/code>)&lt;/li>
-&lt;li>G1&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>JDK 默认组合是并行收集器 (ParallelScavenge + &lt;code>Parallel Old&lt;/code>)&lt;/p>
-&lt;hr>
-&lt;p>参考：&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://juejin.im/post/6844904181761851400">GC 垃圾回收机制&lt;/a>&lt;/li>
-&lt;/ul></description></item></channel></rss>
+ 
+ &lt;a class="anchor" href="#%e5%9e%83%e5%9c%be%e6%94%b6%e9%9b%86%e5%99%a8"&gt;#&lt;/a&gt;
+ 
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;串行收集器
+&lt;ul&gt;
+&lt;li&gt;Serial GC&lt;/li&gt;
+&lt;li&gt;Serial old&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;并行收集器
+&lt;ul&gt;
+&lt;li&gt;Parallel GC&lt;/li&gt;
+&lt;li&gt;ParNew GC&lt;/li&gt;
+&lt;li&gt;Parallel Old GC&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;并发收集器
+&lt;ul&gt;
+&lt;li&gt;CMS (&lt;code&gt;Concurrent Mark Sweep&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;G1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;JDK 默认组合是并行收集器 (ParallelScavenge + &lt;code&gt;Parallel Old&lt;/code&gt;)&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;参考：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://juejin.im/post/6844904181761851400"&gt;GC 垃圾回收机制&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>
